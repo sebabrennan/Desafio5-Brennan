@@ -1,0 +1,26 @@
+htlm 
+    head 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css", integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT", crossorigin="anonymous")
+        title='Formulario'
+    body 
+        h2 Lista de PRODUCTOS
+        if productos
+            table(class="table table-dark ms-4 me-4")
+                thead 
+                    tr 
+                        th(scope="col") Title
+                        th(scope="col") Price
+                        th(scope="col") Image URL
+                tbody 
+                    each producto in productos 
+                        tr 
+                            th(scope='col')=producto.title
+                            th(scope='col')=producto.price
+                            th(scope='col')
+                                img(src=producto.img width="100" height="100")
+        else 
+            h3 No hay productos    
+        a(class="button" href="/")
+            button(class='btn btn-info') Formulario
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8", crossorigin="anonymous") 

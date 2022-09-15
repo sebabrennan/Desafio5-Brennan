@@ -1,0 +1,20 @@
+htlm 
+    head 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css", integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT", crossorigin="anonymous")
+        title='Formulario'
+    body 
+        h2 Ingrese producto
+        form(action="/productos", method='POST', class='mb-3')
+            label(class='form-label') Title
+                input(type="text", name='title')
+            label(class='form-label') Price
+                input(type="number", name='price')
+            label(class='form-label') Image URL
+                input(type="text", name='img')
+            a(class="button" type="submit")
+                button(class='btn btn-info') Submit
+            
+        a(class="button" href="/productos")
+            button(class='btn btn-info') Productos
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8", crossorigin="anonymous") 
